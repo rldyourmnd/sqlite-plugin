@@ -25,7 +25,7 @@ tempfile = "3"
 libc = "0.2"
 
 [build-dependencies]
-bindgen = { version = "0.72", default-features = false }
+bindgen = { version = "0.72", default-features = false, features = ["runtime"] }
 
 [features]
 default = ["static"]
