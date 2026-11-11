@@ -39,6 +39,9 @@ jobs:
       - name: Build
         run: cargo build --all-features
 
+      - name: Test bindgen runtime feature unification
+        run: cargo check --manifest-path tests/bindgen-runtime/Cargo.toml
+
       - name: Test
         run: cargo nextest run --all-features
 

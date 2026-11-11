@@ -1,0 +1,12 @@
+[package]
+name = "sqlite-plugin-bindgen-runtime-test"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+sqlite-plugin = { path = "../.." }
+
+[build-dependencies]
+# A distinct Builder version reproduces downstream feature unification.
+bindgen = { version = "=0.71.1", default-features = false, features = ["runtime"] }
